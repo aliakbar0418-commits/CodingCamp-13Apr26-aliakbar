@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense &amp; Budget Visualizer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Expense &amp; Budget Visualizer</h1>
+      <div id="balance-display">Total: $0.00</div>
+    </header>
+
+    <main>
+      <section id="form-section">
+        <form id="transaction-form">
+          <input type="text" id="item-name" placeholder="Item name" />
+          <span id="name-error" class="error"></span>
+          <input type="number" id="item-amount" placeholder="Amount" min="0.01" step="0.01" />
+          <span id="amount-error" class="error"></span>
+          <select id="item-category">
+            <option value="">Select category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Fun">Fun</option>
+          </select>
+          <span id="category-error" class="error"></span>
+          <button type="submit">Add Transaction</button>
+        </form>
+      </section>
+
+      <section id="chart-section">
+        <canvas id="pie-chart" width="300" height="300"></canvas>
+        <p id="chart-placeholder">No transactions yet.</p>
+      </section>
+
+      <section id="list-section">
+        <ul id="transaction-list"></ul>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
